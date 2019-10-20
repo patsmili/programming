@@ -6,8 +6,10 @@ get the size of longest sequence of zeros in a binary representation of an integ
 '''
 
 object BinaryGap extends App{
-	def getBinaryGap(num : Int) : Int ={
-		0
+	def getBinaryGap(num : Int) : Int = {
+    val list = "(?<=1)0+(?=1)".r.findAllIn(N.toBinaryString).toList
+    if (list.isEmpty) 0
+    else list.maxBy(_.length).length
 	}
 
   println("6=>" + 6.toBinaryString + "=>" + getBinaryGap(6))
