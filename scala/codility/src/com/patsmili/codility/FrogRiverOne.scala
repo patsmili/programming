@@ -1,6 +1,9 @@
 package com.patsmili.codility
 
 '''
+To find the earliest time when the frog can jump to the other side of the river.
+given that: a non-empty zero-indexed array A consisting of N integers representing the falling leaves. 
+A[K] represents the position where one leaf falls at time K, measured in minutes.
 '''
 
 object FrogRiverOne{
