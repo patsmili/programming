@@ -7,6 +7,7 @@ Rotate an array to the right by a given number of steps.
 object CyclicRotation{
 	def solution(arr: Array[Int], steps: Int): Array[Int] = {
 		
+		@scala.annotation.tailrec
 		def rotateSteps(lst: List[Int], steps: Int): List[Int] = {
 			
 			def rotateOneStep(lst: List[Int]) = {
