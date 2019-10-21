@@ -6,6 +6,8 @@ to find the minimum positive integer missing in the sequence.
 
 object MissingInteger{
 	def solution(A: Array[Int]): Int = {
+
+		@scala.annotation.tailrec
 		def findMissing(in: Int, l: List[Int]): Int = {
 			if (l.isEmpty || l.head != in) in
 			else findMissing(in + 1, l.tail)

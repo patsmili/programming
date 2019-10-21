@@ -24,6 +24,7 @@ object MaxCounters{
 			for (i <- counters.indices) counters(i) = max
 		}
 
+		@scala.annotation.tailrec
 		def getCounters(ops: List[Int]): Array[Int] = {
 			if (ops.isEmpty) counters
 			else {

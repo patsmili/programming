@@ -11,6 +11,8 @@ object FrogRiverOne{
 		val pos: Array[Int] = Array.ofDim(X + 1)
 
 		def areAllLeavesInPlace = {
+
+			@scala.annotation.tailrec
 			def rec(i: Int): Boolean = {
 				if (i == X + 1) true
 				else if (pos(i) == 0) false
@@ -19,6 +21,7 @@ object FrogRiverOne{
 			rec(1)
 		}
 
+		@scala.annotation.tailrec
 		def findTime(step: Int, L: List[Int]): Int = {
 			if (L.isEmpty) -1
 			else {

@@ -6,6 +6,8 @@ find the only missing element from the array containing integers in range 1..(id
 
 object PermMissingElement{
 	def solution(arr: Array[Int]): Int = {
+
+		@scala.annotation.tailrec
 		def findMissing(idx: Int, lst: List[Int]): Int = {
 			if (lst.isEmpty || lst.head != idx + 1) idx + 1
 			else findMissing(idx + 1, lst.tail)
